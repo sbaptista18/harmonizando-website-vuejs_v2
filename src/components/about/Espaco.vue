@@ -152,7 +152,7 @@ export default {
       }
 
       .left {
-        width: pxToEm(610);
+        width: pxToEm(710);
         height: pxToEm(495);
         left: 0;
         position: absolute;
@@ -182,6 +182,7 @@ export default {
           display: flex;
           justify-content: space-between;
           height: auto;
+          flex-wrap: wrap;
         }
 
         .pic {
@@ -196,13 +197,12 @@ export default {
 
           @media only screen and (max-width: 599px) {
             position: relative;
-            width: 30%;
+            width: 50%;
           }
 
           &:nth-child(2) {
             bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 20%;
 
             @media only screen and (max-width: 599px) {
               left: 0;
@@ -211,7 +211,17 @@ export default {
           }
 
           &:nth-child(3) {
+            right: 20%;
+
+            @media only screen and (max-width: 599px) {
+              right: 0;
+              transform: translateX(0);
+            }
+          }
+
+          &:nth-child(4) {
             right: 0;
+            bottom: 0;
           }
         }
       }
